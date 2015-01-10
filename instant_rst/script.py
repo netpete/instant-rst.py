@@ -22,14 +22,13 @@ import socket
 HOST = socket.gethostbyname(socket.gethostname())
 
 def browse(b, port, filename):
-
     time.sleep(3)
     url =  'http://' + HOST + ':'+ port
     webbrowser.open(url)
     time.sleep(3)
     post(url, {'file': filename})
 
-if __name__ == "__main__":
+def main():
     ag = args.parse()
 
     p = Process(target=browse, args=(ag.browser, ag.port, ag.filename))
@@ -44,3 +43,6 @@ if __name__ == "__main__":
         print sys.exc_info()
         p.terminate()
         sys.exit()
+
+if __name__ == "__main__":
+    main()

@@ -58,7 +58,7 @@ setup(
     # simple. Or you can use find_packages().
     # packages=find_packages('instant_rst'),
     # package_dir = {'':'instant_rst'},
-    packages=['instant_rst'],
+    packages=['instant_rst', ],
 
     # List run-time dependencies here.  These will be installed by pip when your
     # project is installed. For an analysis of "install_requires" vs pip's
@@ -86,14 +86,14 @@ setup(
     #                                     'instant_rst/templates/index.rst'])],
 
     include_package_data=True,
-    scripts=['scripts/instantRst'],
+    #scripts=['scripts/instantRst'],
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
          'console_scripts': [
-             'scripts/instantRst',
+             'instantRst=instant_rst.script:main',
          ],
      },
 )
