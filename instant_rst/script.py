@@ -22,10 +22,10 @@ import socket
 HOST = socket.gethostbyname(socket.gethostname())
 
 def browse(b, port, filename):
-    time.sleep(3)
+    time.sleep(2)
     url =  'http://' + HOST + ':'+ port
     webbrowser.open(url)
-    time.sleep(3)
+    time.sleep(2)
     post(url, {'file': filename})
 
 def main():
