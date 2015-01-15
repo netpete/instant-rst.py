@@ -20,12 +20,13 @@ import socket
 
 # get hostname of local LAN IP
 HOST = socket.gethostbyname(socket.gethostname())
+HOST='localhost'
 
 def browse(b, port, filename):
-    time.sleep(2)
+    time.sleep(3)
     url =  'http://' + HOST + ':'+ port
     webbrowser.open(url)
-    time.sleep(2)
+    time.sleep(3)
     post(url, {'file': filename})
 
 def main():

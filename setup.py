@@ -94,6 +94,7 @@ setup(
     entry_points={
          'console_scripts': [
              'instantRst=instant_rst.script:main',
+             'postRst = instant_rst.http:main',
          ],
      },
 )
